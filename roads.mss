@@ -12,7 +12,7 @@
   [zoom>=17] {  line-pattern-file:url(img/lines/lineL3.jpg); }
 }
 
-#transportation[class='main'] {
+#transportation[class=~'trunk|primary|secondary|tertiary'] {
   line-color:@road-2;  
   [zoom<=7] 	{line-width:0.2;}
   [zoom>=8] 	{line-width:0.3;}  
@@ -32,9 +32,8 @@
     	}
 }
 
-#transportation 	[class='street'], 
-#transportation 	[class='street_limited'], 
-#transportation 	[class='driveway'], 
+#transportation 	[class='minor'], 
+#transportation 	[class='track'], 
 #transportation 	[class='path'] {
   line-color:@road-2;
   [zoom<=12] {line-width:0}
@@ -47,8 +46,7 @@
   [zoom>=18] {  line-width:2;}
 }
 
-#transportation [class='motorway'], 
-#transportation [class='motorway_link'] {
+#transportation [class='motorway'] {
   line-color:@road-darkest;
   [zoom<=12]{  line-color:@road-2;  line-width:0.4;  }
   [zoom>=13] {  line-width:0.7;}

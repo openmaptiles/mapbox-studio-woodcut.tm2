@@ -8,9 +8,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 8.5357
-  - 47.3766
-  - 15
+  - -45.1758
+  - 12.9831
+  - 3
 description: A woodcut inspired map for city streets.
 format: "png8:m=h:c=64"
 interactivity_layer: ''
