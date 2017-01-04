@@ -4,7 +4,7 @@ http://www.pixeden.com/graphic-web-backgrounds/wood-pattern-background
 */
 
 // Languages: name (local), name_en, name_fr, name_es, name_de
-@name: '[name_en]';
+@name: '[name]';
 @country: "Quicksand Bold", "Open Sans Semibold", "Arial Unicode MS Regular"; 
 @sans: "Quicksand Regular", "Open Sans Regular", "Arial Unicode MS Regular"; 
 
@@ -33,8 +33,8 @@ Map {
   [zoom<=7] { polygon-pattern-gamma: 0.2; }
 }
 
-#waterway [type='river'],
-#waterway [type='canal'] {
+#waterway [class='river'],
+#waterway [class='canal'] {
   [zoom>=9] {
     line-color:#fff;
     line-width: 0.5;
@@ -44,7 +44,7 @@ Map {
   }
 }
 
-#waterway [type='stream'] {
+#waterway [class='stream'] {
   line-color:#fff;
   line-width: 0.5;
   [zoom>=14] { line-pattern-file:url('img/woodline-003.jpg');}
@@ -53,14 +53,22 @@ Map {
 }
 
 // Landuse areas //
-#landuse {
+#landuse[class='hospital'],
+#landuse[class='school'],
+#landuse[class='industrial'] {
   	polygon-pattern-alignment: global;
 	polygon-pattern-file:url('img/wood2.jpg');
     [class='parking']{ polygon-pattern-file:url('img/wood-012.jpg');}  
     [class='hospital'] {polygon-pattern-file:url('img/wood-012-2.jpg');}
     [class='school']{ polygon-pattern-file:url('img/wood-005.jpg');}  
-    [class='industrial'],[class='cemetary']  {polygon-pattern-file:url('img/wood-003.jpg');}  
-    [class='sand'] {polygon-pattern-file:url('img/wood3.jpg');}
+    [class='industrial'],[class='cemetery']  {polygon-pattern-file:url('img/wood-003.jpg');}  
+}
+
+#landcover {
+  [class='sand'] {
+    polygon-pattern-alignment: global;
+    polygon-pattern-file:url('img/wood3.jpg');
+  } 
 }
 
 // Buildings //

@@ -1,13 +1,11 @@
 //Parks
-#poi_label[maki=''] { opacity:1; } // hack for mapnik#1952
-
-#poi_label [maki='park'][scalerank<4] {
+#poi [class='park'] {
   [zoom<14],
-  [zoom>=14][scalerank=1][localrank<=1],
-  [zoom>=15][scalerank<=2][localrank<=1],
-  [zoom>=16][scalerank<=3][localrank<=1],
-  [zoom>=17][localrank<=4],
-  [zoom>=18][localrank<=16],
+  [zoom>=14][rank=1][rank<=1],
+  [zoom>=15][rank<=2][rank<=1],
+  [zoom>=16][rank<=3][rank<=1],
+  [zoom>=17][rank<=4],
+  [zoom>=18][rank<=16],
   [zoom>=19] {
     text-name: @name;
     text-face-name: @sans;

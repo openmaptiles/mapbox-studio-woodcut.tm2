@@ -1,5 +1,5 @@
 // Roads 
-#road_label[zoom>=15][class='main'] {
+#transportation_name[zoom>=15][class='main'] {
   text-avoid-edges: true;
   text-name: @name;
   text-character-spacing: 0.5;
@@ -20,8 +20,8 @@
 }
 
 // Streets and paths
-#road_label[zoom>=17][class='street'], 
-#road_label[zoom>=17][class='path'] {
+#transportation_name[zoom>=17][class='street'], 
+#transportation_name[zoom>=17][class='path'] {
   text-avoid-edges: true;
   text-name: @name;
   text-character-spacing: 0.5;

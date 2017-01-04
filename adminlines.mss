@@ -1,4 +1,4 @@
-#admin[maritime=0] {
+#boundary {
   line-join: round;
   line-color:#683f26;
   
